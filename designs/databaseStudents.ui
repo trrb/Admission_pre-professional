@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1308</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DataBase</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(233,233,233);</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>-30</y>
+     <width>1211</width>
+     <height>1071</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>proton.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>1091</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Поиск</string>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>110</y>
+     <width>1091</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(180, 230, 255);
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>ФИО</string>
+    </property>
+    <property name="font">
+     <font>
+      <italic>true</italic>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Номер телефона</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Родитель 1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Родитель 2</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Рус яз</string>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Матем</string>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Общ кол-во</string>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>21</y>
+     <width>1041</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Stencil&quot;;
+background-color:rgb(233,233,233);</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;СПИСОК УЧЕНИКОВ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_btn">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>170</y>
+     <width>181</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(49, 49, 49);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Удалить ученика</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updateinfo_btn">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>120</y>
+     <width>181</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(49, 49, 49);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Сохранить изменения</string>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>label</zorder>
+  <zorder>delete_btn</zorder>
+  <zorder>updateinfo_btn</zorder>
+  <zorder>search</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

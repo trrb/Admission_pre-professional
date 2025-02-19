@@ -40,6 +40,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('designs/projectdesign2224.ui', self)
+
         self.setFixedSize(SCREEN_SIZE_X, SCREEN_SIZE_Y)
         self.import_btn.clicked.connect(self.import_xlsx)
 
