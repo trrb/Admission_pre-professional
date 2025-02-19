@@ -104,15 +104,23 @@ class TableDataBase(MainWindow):
         self.subjects = subjects
         self.setFixedSize(SCREEN_SIZE_X1, SCREEN_SIZE_Y1)
         self.tableWidget.setRowCount(len(self.students))
-        print(self.students)
         for stud in range(len(self.students)):
-            for data in range(len(self.students[stud])):
+            for data in range(len(self.students[stud][:6])):
                 if self.students[stud][data]:
                     self.tableWidget.setItem(stud, data, QTableWidgetItem(str(self.students[stud][data])))
                 else:
-                    self.tableWidget.setItem(stud, data, QTableWidgetItem('Пусто'))
+                    self.tableWidget.setItem(stud, data, QTableWidgetItem(''))
+            summa = 0
+            for numb in self.students[stud][4:]:
+                if numb:
+                    summa += numb
+            self.tableWidget.setItem(stud, 6, QTableWidgetItem(str(summa)))
+        print(0)
+        self.tableWidget.itemSelectionChanged.connect(self.active_table)
 
-
+    def active_table(self):
+        self.more_info_btn.setEnabled(True)
+        self.delete_btn.setEnabled(True)
 
 if __name__ == '__main__':
     main()

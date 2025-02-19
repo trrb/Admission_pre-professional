@@ -66,6 +66,9 @@
      <height>601</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);
 background-color: rgb(180, 230, 255);
@@ -75,10 +78,11 @@ background-color: rgb(180, 230, 255);
     <property name="text">
      <string>ФИО</string>
     </property>
-    <property name="font">
-     <font>
-      <italic>true</italic>
-     </font>
+    <property name="toolTip">
+     <string comment="Фамилия, Имя, Отчество" extracomment="Фамилия, Имя, Отчество"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Фамилия, Имя, Отчество" extracomment="Фамилия, Имя, Отчество"/>
     </property>
    </column>
    <column>
@@ -98,36 +102,35 @@ background-color: rgb(180, 230, 255);
    </column>
    <column>
     <property name="text">
-     <string>Рус яз</string>
-    </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Матем</string>
     </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
+    <property name="toolTip">
+     <string comment="Математика" extracomment="Математика"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Математика" extracomment="Математика"/>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Общ кол-во</string>
+     <string>Рус яз</string>
     </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-      <stylestrategy>PreferDefault</stylestrategy>
-     </font>
+    <property name="toolTip">
+     <string comment="Русский язык" extracomment="Русский язык"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Русский язык" extracomment="Русский язык"/>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Общ баллы</string>
+    </property>
+    <property name="toolTip">
+     <string comment="Общее кол-во баллов" extracomment="Общее кол-во баллов"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Общее кол-во баллов" extracomment="Общее кол-во баллов"/>
     </property>
    </column>
   </widget>
@@ -149,10 +152,13 @@ background-color:rgb(233,233,233);</string>
    </property>
   </widget>
   <widget class="QPushButton" name="delete_btn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>1110</x>
-     <y>170</y>
+     <y>110</y>
      <width>181</width>
      <height>30</height>
     </rect>
@@ -165,12 +171,18 @@ font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
    <property name="text">
     <string>Удалить ученика</string>
    </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="updateinfo_btn">
    <property name="geometry">
     <rect>
      <x>1110</x>
-     <y>120</y>
+     <y>630</y>
      <width>181</width>
      <height>30</height>
     </rect>
@@ -184,12 +196,59 @@ font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
     <string>Сохранить изменения</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="more_info_btn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>150</y>
+     <width>181</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(49, 49, 49);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Подробнее</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="download_data_btn">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>680</y>
+     <width>181</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  rgb(180, 230, 255);
+color: rgb(0, 0, 0);
+font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Скачать данные</string>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>tableWidget</zorder>
   <zorder>label</zorder>
   <zorder>delete_btn</zorder>
   <zorder>updateinfo_btn</zorder>
   <zorder>search</zorder>
+  <zorder>more_info_btn</zorder>
+  <zorder>download_data_btn</zorder>
  </widget>
  <resources/>
  <connections/>
